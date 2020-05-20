@@ -46,7 +46,7 @@
                         "protocol": "Tcp",
                         "sourcePortRange": "*",
                         "destinationPortRange": "*",
-                        "sourceAddressPrefix": "VIRTUAL_NETWORK",
+                        "sourceAddressPrefix": "VIRTUALNETWORK",
                         "destinationAddressPrefix": "10.0.4.0/24",
                         "access": "Allow",
                         "priority": 101,
