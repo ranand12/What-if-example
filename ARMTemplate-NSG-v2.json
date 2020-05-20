@@ -34,7 +34,7 @@
                         "destinationPortRange": "*",
                         "sourceAddressPrefix": "*",
                         "destinationAddressPrefix": "10.0.4.0/24",
-                        "access": "Deny",
+                        "access": "All",
                         "priority": 150,
                         "direction": "Inbound"
                     }
@@ -50,20 +50,6 @@
                         "destinationAddressPrefix": "10.0.4.0/24",
                         "access": "Allow",
                         "priority": 101,
-                        "direction": "Inbound"
-                    }
-                },
-                {
-                    "name": "harmlessrule",
-                    "properties": {
-                        "description": "minorchange",
-                        "protocol": "Tcp",
-                        "sourcePortRange": "*",
-                        "destinationPortRange": "3389",
-                        "sourceAddressPrefix": "*",
-                        "destinationAddressPrefix": "10.0.4.0/24",
-                        "access": "Allow",
-                        "priority": 103,
                         "direction": "Inbound"
                     }
                 }
