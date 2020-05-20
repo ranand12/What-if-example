@@ -11,7 +11,20 @@
         "location": "[resourceGroup().location]",
         "properties": {
             "securityRules": [
-               
+                {
+                    "name": "apptodb",
+                    "properties": {
+                        "description": "allow app to db communication",
+                        "protocol": "Tcp",
+                        "sourcePortRange": "*",
+                        "destinationPortRange": "1433",
+                        "sourceAddressPrefix": "10.0.2.0/24",
+                        "destinationAddressPrefix": "10.0.4.0/24",
+                        "access": "Allow",
+                        "priority": 110,
+                        "direction": "Inbound"
+                    }
+                },
                 {
                     "name": "denyall",
                     "properties": {
@@ -37,20 +50,6 @@
                         "destinationAddressPrefix": "10.0.4.0/24",
                         "access": "Allow",
                         "priority": 101,
-                        "direction": "Inbound"
-                    }
-                },
-                 {
-                    "name": "apptodb",
-                    "properties": {
-                        "description": "allow app to db communication",
-                        "protocol": "Tcp",
-                        "sourcePortRange": "*",
-                        "destinationPortRange": "1433",
-                        "sourceAddressPrefix": "10.0.2.0/24",
-                        "destinationAddressPrefix": "10.0.4.0/24",
-                        "access": "Allow",
-                        "priority": 100,
                         "direction": "Inbound"
                     }
                 }
