@@ -12,13 +12,13 @@
         "properties": {
             "securityRules": [
                 {
-                    "name": "webtodb",
+                    "name": "apptodb",
                     "properties": {
-                        "description": "allow web to db communication",
+                        "description": "allow app to db communication",
                         "protocol": "Tcp",
                         "sourcePortRange": "*",
                         "destinationPortRange": "1433",
-                        "sourceAddressPrefix": "10.0.3.0/24",
+                        "sourceAddressPrefix": "10.0.2.0/24",
                         "destinationAddressPrefix": "10.0.4.0/24",
                         "access": "Allow",
                         "priority": 100,
@@ -55,19 +55,6 @@
                 }
 
             ]
-        }
-    },{
-        "name": "test12mystorage1",
-        "type": "Microsoft.Storage/storageAccounts",
-        "apiVersion": "2019-06-01",
-        "tags": {
-            "displayName": "test12mystorage1"
-        },
-        "location": "[resourceGroup().location]",
-        "kind": "StorageV2",
-        "sku": {
-            "name": "Premium_LRS",
-            "tier": "Premium"
         }
     }],
     "outputs": {}
