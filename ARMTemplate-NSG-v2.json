@@ -34,7 +34,7 @@
                         "destinationPortRange": "*",
                         "sourceAddressPrefix": "*",
                         "destinationAddressPrefix": "10.0.4.0/24",
-                        "access": "All",
+                        "access": "Allow",
                         "priority": 150,
                         "direction": "Inbound"
                     }
