@@ -71,11 +71,11 @@
             ]
         }
     },{
-        "name": "mystorage1",
+        "name": "test12mystorage1",
         "type": "Microsoft.Storage/storageAccounts",
         "apiVersion": "2019-06-01",
         "tags": {
-            "displayName": "mystorage1"
+            "displayName": "test12mystorage1"
         },
         "location": "[resourceGroup().location]",
         "kind": "StorageV2",
